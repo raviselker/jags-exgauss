@@ -30,7 +30,8 @@ double DExgauss::dexgauss(double x, vector<double const *> const &parameters) co
 
   double logd;
 
-  logd = 1+1;
+  logd =  log(lambda / 2) + (lambda / 2) * (2 * mu + lambda * pow(sigma,2) - 2 * x) +
+        log(erfc((mu + lambda * pow(sigma,2) - x)/(sqrt(2) * sigma)));
   
   return logd;
 }
