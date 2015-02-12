@@ -19,7 +19,8 @@ DExgauss::DExgauss() : ScalarDist("dexgauss", 3, DIST_PROPORTION)
 
 bool DExgauss::checkParameterValue (vector<double const *> const &parameters) const
 {
-    return  (true);
+    return  (SIGMA(parameters)>0 &&
+             LAMBDA(parameters)>0);
 }
 
 double DExgauss::dexgauss(double x, vector<double const *> const &parameters) const
