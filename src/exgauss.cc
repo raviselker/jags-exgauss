@@ -1,6 +1,7 @@
 #include <Module.h> // JAGS module base class
 #include <distributions/DExgauss.h> // Exgauss distribution class
 
+namespace jags { // jags namespace
 namespace exgauss { // module namespace
 
 class EXGAUSSModule : public Module { // module class
@@ -19,6 +20,7 @@ EXGAUSSModule::~EXGAUSSModule() {
   } // deletes instantiated distribution objects
 }
 
-}
+} // namespace exgauss
+} // namespace jags
 
 exgauss::EXGAUSSModule _exgauss_module;

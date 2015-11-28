@@ -12,6 +12,7 @@ using std::vector;
 #define SIGMA(par) (*par[1])
 #define LAMBDA(par) (*par[2])
 
+namespace jags {
 namespace exgauss {
 
 DExgauss::DExgauss() : ScalarDist("dexgauss", 3, DIST_PROPORTION)
@@ -66,4 +67,5 @@ bool DExgauss::isDiscreteValued(vector<bool> const &mask) const
     return true;
 }
 
-}
+} // namespace exgauss
+} // namespace jags

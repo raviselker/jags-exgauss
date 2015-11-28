@@ -2,6 +2,7 @@
 #define DEXGAUSS_H_
 #include <distribution/ScalarDist.h> // JAGS scalar distribution base class
 
+namespace jags {
 namespace exgauss {
 
 class DExgauss : public ScalarDist // scalar distribution class
@@ -23,5 +24,7 @@ class DExgauss : public ScalarDist // scalar distribution class
     bool isDiscreteValued(std::vector<bool> const &mask) const;
 };
 
-}
+} // namespace exgauss
+} // namespace jags
+
 #endif /* DEXGAUSS_H_ */
