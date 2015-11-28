@@ -1,4 +1,4 @@
-#include <Module.h> // JAGS module base class
+#include <module/Module.h> // JAGS module base class
 #include <distributions/DExgauss.h> // Exgauss distribution class
 
 namespace jags { // jags namespace
@@ -23,4 +23,4 @@ EXGAUSSModule::~EXGAUSSModule() {
 } // namespace exgauss
 } // namespace jags
 
-exgauss::EXGAUSSModule _exgauss_module;
+jags::exgauss::EXGAUSSModule _exgauss_module;
